@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+        input{
+            position:fixed;
+            top:40%;
+            left:25%;
+            color:#1a1818;
+            font-size: 14px;
+            line-height: 15px;
+            margin-top:50px;
+            margin-left: 100px;
+            padding:6px 100px 16px 100px;
+            text-indent: 12px;
+            border-color: blue;
+        }
+        input:focus{
+            border-color: #3ec608;
+            cursor: pointer;
+        }
+        input::placeholder{
+            color:rgba(164, 6, 164, 0.977);
+            font-style: italic;
+            font-weight:600;
+        }
+        .add{
+            position:fixed;
+            top:58%;
+            left:64%;
+        }
+        ul{
+            opacity:0;
+        }
+        .show{
+            position: fixed;
+            bottom: 50px;
+            left: 40%;
+        }
+        </style>
+    </head>
+    <body>
+        <input class="input" placeholder="write your plan here!" />
+        <button class="add" onclick="add()">click here to save your plan</button>
+        <ul class="planner"></ul>
+        <button class="show" onclick="showList()">click here to show your plan list</button>
+        <script>
+            function add(){
+                var input=document.querySelector(".input");
+                if (input.value.trim().length > 3){
+                var li=document.createElement("LI");
+                li.innerHTML=input.value;
+                var planner=document.querySelector(".planner");
+                planner.appendChild(li);
+                input.value = "";
+                input.focus();
+                } else{
+                alert("your plan should be more than 3 charecter!");
+                input.value = "";
+                }       
+            }
+            function showList(){
+                document.querySelector(".input").style.opacity="0";
+                document.querySelector(".add").style.opacity="0";
+                document.querySelector(".show").style.opacity="0";
+                document.querySelector(".planner").style.opacity="1";
+            }
+        
+        </script>
+    </body>
+</html>
