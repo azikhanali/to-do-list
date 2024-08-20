@@ -1,0 +1,64 @@
+body{
+    background-image: url(../assets/todolist.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100dvh;
+    width: 100%;
+    position:relative;
+}
+input{
+    background: none;
+    outline:0;
+    width:60%;
+    color:#1a1818;
+    font-size: 14px;
+    line-height: 12px;
+    margin-top:20px;
+    margin-left: 200px;
+    padding:6px 100px 16px 100px;
+    text-indent: 12px;
+    border-color: blue;
+}
+input:focus{
+    border-color: #3ec608;
+    cursor: pointer;
+}
+input::placeholder{
+    color:rgba(164, 6, 164, 0.977);
+    font-style: italic;
+    font-weight:800;
+    text-align: center;
+}
+button{
+    background-color: #f1c7e7;
+    border-radius: 8px;
+    color: darkblue;
+    margin-top: 5px;
+}
+.planner li{
+    color:blue;
+    font-size: large;
+    margin-bottom: 15PX;
+}
+.planner i{
+    padding-left: 10px;
+    color:#1a1818;
+}
+.content{
+    position:absolute;
+    top:30%;
+    left:40%;
+    width: 40%;
+    height:50%;
+    background-color: rgba(248, 242, 248, 0.1);
+}
+.planner .doneDecorate{
+    color:rgb(36, 222, 36);
+    font-style: italic;
+    font-weight: bold;
+}
+.doneDecorate span{
+    font-size: larger;
+    font-weight: bolder;
+    padding-left: 10px;
+}
